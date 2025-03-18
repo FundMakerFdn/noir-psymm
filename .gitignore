@@ -2,6 +2,7 @@
 /offchain
 **/target/*_witness.gz
 **/target/*_circuit.json
+**/target/*_proof
 
 *.tmp.txt
 
