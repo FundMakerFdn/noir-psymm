@@ -1,6 +1,6 @@
-# NoirPsymm
+# noir-psymm
 
-A project combining Noir zero-knowledge circuits with Ethereum smart contracts.
+A project integrating pSymm contract with Noir ZK circuits for enhanced privacy.
 
 ## Installation
 
