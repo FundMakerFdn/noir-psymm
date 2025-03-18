@@ -26,32 +26,10 @@
     "viem": "^2.21.51",
     "ws": "^8.18.0"
   },
-  "scripts": {
-    "deploy": "hardhat run --network localhost apps/validator/SettleMaker/deploy.js",
-    "validator": "hardhat validator --network localhost",
-    "miner": "hardhat run --network localhost apps/validator/miner.js",
-    "addSymm": "hardhat addSymm --network localhost",
-    "read": "hardhat read --network localhost",
-    "write": "hardhat write --network localhost",
-    "scenario": "./demo/tmux/scenario.sh",
-    "party": "./demo/tmux/party.sh",
-    "hardhat-noir": "hardhat test contracts/test/noirPSymm/index.js",
-    "noir_demo": "./demo/tmux/noir_demo.sh",
-    "server:a": "cd noir_demo && node server_A.js",
-    "server:b": "cd noir_demo && node server_B.js",
-    "dev": "cd noir_demo/frontend && yarn dev",
-    "noir_demo_deploy": "cd noir_demo && hardhat run scripts/deploy.js --network localhost"
-  },
   "imports": {
-    "#root/*": "./*",
-    "#libs/*": "./libs/*"
+    "#root/*": "./*"
   },
   "devDependencies": {
     "yarn-audit-fix": "^10.1.1"
-  },
-  "workspaces": [
-    "apps/*",
-    "libs/*"
-  ],
-  "private": true
+  }
 }
