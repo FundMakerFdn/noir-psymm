@@ -2,6 +2,12 @@
 
 A project integrating pSymm contract with Noir ZK circuits for enhanced privacy.
 
+## Circuits
+
+- ATC (address to custody) - deposit funds to pSymm
+- CTC (custody to custody) - split/anonymize funds between pSymm custodies (without disclosing original commitment
+- CTA (custody to address) - withdraw funds from pSymm
+
 ## Installation
 
 1. Install JavaScript dependencies:
@@ -10,10 +16,9 @@ A project integrating pSymm contract with Noir ZK circuits for enhanced privacy.
    yarn install
    ```
 
-2. Install Noir and the Barretenberg (BB) proving backend:
-   Follow the official Noir installation guide at https://noir-lang.org/docs/getting_started/quick_start
+2. Install Noir and the Barretenberg (BB) proving backend [from official docs](https://noir-lang.org/docs/getting_started/quick_start)
 
-## Testing
+## Testing noir-psymm
 
 Run the test suite with:
 
@@ -21,7 +26,7 @@ Run the test suite with:
 yarn hardhat test contracts/test/noirPSymm
 ```
 
-## How to Add a New Circuit
+## How to integrate a new Noir circuit
 
 To create a new circuit (e.g., CTA based on ATC):
 
