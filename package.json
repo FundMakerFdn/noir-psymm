@@ -1,0 +1,57 @@
+{
+  "name": "noir-psymm",
+  "version": "1.0",
+  "author": "Vladyslav <web.user@ukr.net>, Max OTC maxgctwo@rasa.capital",
+  "license": "MIT",
+  "dependencies": {
+    "@aztec/bb.js": "0.72.1",
+    "@iarna/toml": "^2.2.5",
+    "@noir-lang/backend_barretenberg": "^0.36.0",
+    "@noir-lang/noir_js": "1.0.0-beta.2",
+    "@noir-lang/noir_wasm": "1.0.0-beta.2",
+    "@nomicfoundation/hardhat-ignition": "^0.15.7",
+    "@nomicfoundation/hardhat-ignition-viem": "^0.15.7",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.12",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.1",
+    "@nomicfoundation/hardhat-viem": "^2.0.5",
+    "@openzeppelin/contracts": "^5.1.0",
+    "@openzeppelin/merkle-tree": "^1.0.7",
+    "better-sqlite3": "^11.5.0",
+    "express": "^4.21.2",
+    "hardhat": "^2.22.16",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "viem": "^2.21.51",
+    "ws": "^8.18.0"
+  },
+  "scripts": {
+    "deploy": "hardhat run --network localhost apps/validator/SettleMaker/deploy.js",
+    "validator": "hardhat validator --network localhost",
+    "miner": "hardhat run --network localhost apps/validator/miner.js",
+    "addSymm": "hardhat addSymm --network localhost",
+    "read": "hardhat read --network localhost",
+    "write": "hardhat write --network localhost",
+    "scenario": "./demo/tmux/scenario.sh",
+    "party": "./demo/tmux/party.sh",
+    "hardhat-noir": "hardhat test contracts/test/noirPSymm/index.js",
+    "noir_demo": "./demo/tmux/noir_demo.sh",
+    "server:a": "cd noir_demo && node server_A.js",
+    "server:b": "cd noir_demo && node server_B.js",
+    "dev": "cd noir_demo/frontend && yarn dev",
+    "noir_demo_deploy": "cd noir_demo && hardhat run scripts/deploy.js --network localhost"
+  },
+  "imports": {
+    "#root/*": "./*",
+    "#libs/*": "./libs/*"
+  },
+  "devDependencies": {
+    "yarn-audit-fix": "^10.1.1"
+  },
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "private": true
+}
