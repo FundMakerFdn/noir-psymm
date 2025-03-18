@@ -4,9 +4,10 @@ A project integrating pSymm contract with Noir ZK circuits for enhanced privacy.
 
 ## Circuits
 
-- ATC (address to custody) - deposit funds to pSymm
+- ATC (address to custody) - deposit funds to pSymm.
 - CTC (custody to custody) - split/anonymize funds between pSymm custodies (without disclosing original commitment
-- CTA (custody to address) - withdraw funds from pSymm
+  - Current problem: mismatch of merkle tree root between Noir and JavaScript test.
+- CTA (custody to address) - withdraw funds from pSymm. Currently not implemented.
 
 ## Installation
 
@@ -16,7 +17,7 @@ A project integrating pSymm contract with Noir ZK circuits for enhanced privacy.
    yarn install
    ```
 
-2. Install Noir and the Barretenberg (BB) proving backend [from official docs](https://noir-lang.org/docs/getting_started/quick_start)
+2. Install Noir and the Barretenberg (BB) proving backend by following [official documentation](https://noir-lang.org/docs/getting_started/quick_start).
 
 ## Testing noir-psymm
 
