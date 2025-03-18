@@ -24,7 +24,7 @@ A project integrating pSymm contract with Noir ZK circuits for enhanced privacy.
 Run the test suite with:
 
 ```bash
-yarn hardhat test contracts/test/noirPSymm
+yarn hardhat test contracts/test/noirPsymm
 ```
 
 ## How to integrate a new Noir circuit
