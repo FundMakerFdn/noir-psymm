@@ -5,7 +5,7 @@ A project integrating pSymm contract with Noir ZK circuits for enhanced privacy.
 ## Circuits
 
 - ATC (address to custody) - deposit funds to pSymm.
-- CTC (custody to custody) - split/anonymize funds between pSymm custodies (without disclosing original commitment
+- CTC (custody to custody) - split/anonymize funds between pSymm custodies (without disclosing original commitment)
   - Current problem: mismatch of merkle tree root between Noir and Solidity, [fixed temporarily](https://github.com/FundMakerFdn/noir-psymm/blob/main/contracts/test/noirPsymm/index.js#L321) with `setRoot`.
 - CTA (custody to address) - withdraw funds from pSymm. Currently not implemented.
 
